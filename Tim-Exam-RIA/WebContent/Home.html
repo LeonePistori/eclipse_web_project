@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="accountManagement.js" charset="utf-8" defer></script>
+<script src="sort.js" charset="utf-8" defer></script>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/mystyle.css" />
+</head>
+<body>
+<p class="alert" id="id_alert"></p>
+<p class="info" id="id_username"></p>
+	<div id="id_generalinfo">
+		<p class="info" id="id_currentaccount"></p>
+		<p class="info" id="id_accountbalance"></p>
+	</div>		
+	
+	<div id="id_confirmcontainer">
+		
+		<div>
+		<button class="backbutton" id="id_backbutton" type="button">Go Back</button>
+		</div>
+		
+		<div class="origininfo">
+			<p id="id_originaccountuser"></p>
+			<p id="id_originaccount"></p>
+			<p id="id_originaccountamount"></p>
+		</div>
+		
+		<div class="destinationinfo">
+			<p id="id_destinationaccountuser"></p>
+			<p id="id_destinationaccount"></p>
+			<p id="id_destinationaccountamount"></p>
+		</div>
+	</div>
+	
+	<div class="addtoindexform">
+		<form action="#" id="id_addtoindex">
+		<p>Save transaction info?</p>
+			  <input class="indexlabel" type="radio" id="yes" name="choice" value="yes">
+			  <label class="indexlabel" for="yes">Yes</label><br>
+			  <input class="indexlabel" type="radio" id="no" name="choice" value="no">
+			  <label class="indexlabel" for="no">No</label><br>
+			  <input class="indexlabel" id="id_addtobutton" type="button" value="Submit">
+		</form>
+	</div>
+	
+	<table id="id_accountscontainer">
+		<thead>
+			<tr>
+				<th>Accounts</th>
+			</tr>
+		</thead>
+		<tbody id="id_accountscontainerbody">
+		</tbody>
+	</table>
+	
+	<table id="id_transactionscontainer">
+			<tr>
+				<th>Date</th>
+				<th>Amount</th>
+				<th>From</th>
+				<th>To</th>
+			</tr>
+		<tbody id="id_transactionscontainerbody">
+
+		</tbody>
+	</table>
+	
+		<div>
+		<form action="#" id="id_createtransactionform">
+		<h2><strong>Complete the form to do a transaction</strong></h2>
+			<fieldset>
+				<p>
+					Destination User Name: <input id="id_inputuser" type="text" name="touser" required />
+				</p>
+				<p>
+					Destination Account Code: <input id="id_inputaccount" type="text" name="toaccount" required />
+				</p>
+				<p>
+					Description: <input type="text" name="description" required/>
+				</p>
+				<p>
+					Amount: <input id="id_formamount" type="text" name="amount" required />
+				</p>
+				<input id="id_submitbutton" type="button" value="Submit">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

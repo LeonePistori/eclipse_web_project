@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Account Info</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/mystyle.css" />
+</head>
+<body>
+	<p class="info" th:text="${'Account number: ' + accountcode}"></p>
+	<p class="info" th:text="${'Balance: ' + accountbalance}"></p>
+	<table>
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Amount</th>
+				<th>From</th>
+				<th>To</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="t : ${transactions}">
+				<td th:text="${t.date}"></td>
+				<td th:text="${t.amount}"></td>
+				<td th:text="${t.originaccount}"></td>
+				<td th:text="${t.destinationaccount}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<h2><strong>Complete the form to do a transaction</strong></h2>
+		<form action="#" th:action="@{/DoTransaction}" method="POST">
+			<fieldset>
+				<p>
+					Destination User Name: <input type="text" name="touser" required />
+				</p>
+				<p>
+					Destination Account Code: <input type="text" name="toaccount" required />
+				</p>
+				<p>
+					Description: <input type="text" name="description"/>
+				</p>
+				<p>
+					Amount: <input type="text" name="amount" required />
+				</p>
+				<input type="submit" name="Transfer">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

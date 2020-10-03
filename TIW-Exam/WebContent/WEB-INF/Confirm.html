@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Confirm</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/mystyle.css" />
+</head>
+<body>
+<div class="origininfo">
+	<p class="info" th:text="${'User: ' + username1}"></p>
+	<p class="info" th:text="${'Account: ' + accountcode1}"></p>
+	<p class="info" th:text="${'Balance: ' + balance1}"></p>
+</div>
+<div class="destinationinfo">
+	<p class="info" th:text="${'User: ' + username2}"></p>
+	<p class="info" th:text="${'Account: ' + accountcode2}"></p>
+	<p class="info" th:text="${'Balance: ' + balance2}"></p>
+</div>
+<form action="Home" method="GET">
+    <input class="backbutton" type="submit" value="Go back" />
+</form>
+</body>
+</html>

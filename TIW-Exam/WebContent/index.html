@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/mystyle.css" />
+</head>
+<body>
+<h1>Welcome to the bank</h1>
+	<form action="CheckLogin" method="POST">
+		<label>
+		Username: <input type="text" name="username" required>
+		</label>
+		<label>
+		Password: <input type="password" name="pwd" required>
+		</label>
+		<input type="submit" value="login">
+		<p th:text=" ${errorMsg}"></p>
+	</form>
+</body>
+</html>

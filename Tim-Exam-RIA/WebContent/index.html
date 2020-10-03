@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="loginManagement.js" charset="utf-8" defer></script>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/mystyle.css" />
+</head>
+
+<body>
+	<h1><strong>Welcome to the bank</strong></h1>
+	
+	<button id="selectlogin" type="button">Log In</button>
+	<button id="selectsignin" type="button">Sign In</button>
+
+	<form action="#" id="id_loginform">
+	<fieldset>
+		<label>
+			Username: <input type="text" name="username" required>
+		</label>
+		<label>
+			Password: <input type="password" name="pwd" required>
+		</label>
+		<input id="loginbutton" type="button" value="login">
+		<p class="alert" id="errormessage"></p>
+	</fieldset></form>
+	
+		<form action="#" id="id_registrationform">
+	<fieldset>
+		<label>
+			Username: <input type="text" id="username" name="username" required>
+		</label>
+		<label>
+			Password: <input type="password" id="pwd" name="pwd" required>
+		</label>
+		<label>
+			Confirm password: <input type="password" id="pwdconf" name="pwdconf" required>
+		</label>
+		<input id="registrationbutton" type="button" value="register">
+		<p class="alert" id="confirmerrormessage"></p>
+	</fieldset></form>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+table, th, tr {
+  border: 1px solid black;
+}
+
+th {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.info {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.alert {
+	color: red;
+}
+
+.origininfo{
+	float:left;
+	color: blue;
+	font-weight: bold;
+	margin-right: 150px;
+}
+
+.destinationinfo{
+	float: left;
+	color: green;
+	font-weight: bold;
+}
+
+.addtoindexform{
+	clear: both
+}
+
+.indexlabel{
+	display: inline;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 10px;
+}
